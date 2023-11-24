@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="643.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashboardController">
+   <children>
+      <JFXButton layoutX="42.0" layoutY="340.0" onAction="#goToCustomer" prefHeight="48.0" prefWidth="167.0" style="-fx-background-color: white;" text="Orders">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXButton>
+      <HBox fx:id="headerPane" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="678.0" style="-fx-background-color: royalblue;">
+         <children>
+            <Label prefHeight="40.0" prefWidth="263.0" text="  User" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label prefHeight="41.0" prefWidth="236.0" text="Super Market" textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu Regular" size="30.0" />
+               </font>
+            </Label>
+            <Label prefHeight="36.0" prefWidth="109.0" text="Date" textFill="#fcfcfc">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label prefHeight="36.0" prefWidth="112.0" text="Timer" textFill="#fcfcfc">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children></HBox>
+      <JFXButton layoutX="42.0" layoutY="177.0" onAction="#goToCustomer" prefHeight="48.0" prefWidth="167.0" style="-fx-background-color: white;" text="Customer">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="42.0" layoutY="259.0" onAction="#goToItems" prefHeight="48.0" prefWidth="167.0" style="-fx-background-color: white;" text="Item">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

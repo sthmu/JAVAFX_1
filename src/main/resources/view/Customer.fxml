@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="646.0" prefWidth="854.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerController">
+   <children>
+      <TextField fx:id="txtName" layoutX="167.0" layoutY="60.0" />
+      <TextField fx:id="txtAddress" layoutX="340.0" layoutY="60.0" />
+      <TextField fx:id="txtCustId" layoutX="31.0" layoutY="60.0" prefHeight="25.0" prefWidth="109.0" />
+      <TextField fx:id="txtSalary" layoutX="508.0" layoutY="60.0" />
+      <Label layoutX="167.0" layoutY="40.0" prefHeight="20.0" prefWidth="75.0" text="Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="40.0" prefHeight="17.0" prefWidth="20.0" text="ID">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="339.0" layoutY="40.0" prefHeight="20.0" prefWidth="75.0" text="Address">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="508.0" layoutY="40.0" prefHeight="20.0" prefWidth="75.0" text="Salary">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="addBtn" buttonType="RAISED" layoutX="678.0" layoutY="59.0" onAction="#addButton" prefHeight="27.0" prefWidth="75.0" style="-fx-border-color: black;" text="Add" />
+      <TableView fx:id="tblCustomer" layoutX="14.0" layoutY="127.0" prefHeight="420.0" prefWidth="812.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="95.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="165.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="258.0" text="Address" />
+            <TableColumn fx:id="colSalary" prefWidth="156.0" text="Salary" />
+            <TableColumn fx:id="colOption" prefWidth="136.0" text="option" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="reloadBtn" buttonType="RAISED" layoutX="722.0" layoutY="563.0" onAction="#reload" prefHeight="41.0" prefWidth="87.0" style="-fx-border-color: black;" text="Reload" />
+      <JFXButton fx:id="updateBtn" buttonType="RAISED" layoutX="765.0" layoutY="59.0" onAction="#update" prefHeight="27.0" prefWidth="75.0" style="-fx-border-color: black;" text="Update" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="701.0" prefWidth="942.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemController">
+   <children>
+      <TableView fx:id="tblItem" layoutX="19.0" layoutY="92.0" prefHeight="544.0" prefWidth="885.0">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="122.0" text="Item Code" />
+          <TableColumn fx:id="colDescription" prefWidth="322.0" text="Description" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="127.0" text="Unit Price" />
+            <TableColumn fx:id="colQty" prefWidth="134.0" text="QTY" />
+            <TableColumn fx:id="colOption" prefWidth="179.0" text="Option" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtItemCode" layoutX="15.0" layoutY="44.0" prefHeight="25.0" prefWidth="121.0" />
+      <TextField fx:id="txtDescription" layoutX="163.0" layoutY="44.0" prefHeight="25.0" prefWidth="220.0" />
+      <TextField fx:id="txtUnitPrice" layoutX="400.0" layoutY="44.0" prefHeight="25.0" prefWidth="144.0" />
+      <TextField fx:id="txtQty" layoutX="574.0" layoutY="44.0" prefHeight="25.0" prefWidth="131.0" />
+      <JFXButton layoutX="730.0" layoutY="44.0" onAction="#addItemBtn" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: lightgrey;" text="ADD" />
+      <JFXButton layoutX="841.0" layoutY="44.0" onAction="#updateItemBtn" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: lightgrey;" text="Update" />
+      <Label layoutX="15.0" layoutY="27.0" text="Item Code" />
+      <Label layoutX="163.0" layoutY="27.0" text="Description" />
+      <Label layoutX="400.0" layoutY="27.0" prefHeight="17.0" prefWidth="131.0" text="unit Price" />
+      <Label layoutX="574.0" layoutY="27.0" prefHeight="17.0" prefWidth="131.0" text="QTY" />
+      <JFXButton fx:id="reloadBtn" layoutX="830.0" layoutY="653.0" onAction="#refreshBtnOnAction" text="Refresh" />
+   </children>
+</AnchorPane>
