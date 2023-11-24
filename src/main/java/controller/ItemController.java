@@ -146,6 +146,23 @@ public class ItemController implements Initializable {
     }
 
     public void updateItemBtn(ActionEvent actionEvent) {
+        String sql="UPDATE item SET description='"+txtDescription.getText()+"',"+
+                "unitPrice="+Double.parseDouble(txtUnitPrice.getText())+
+                " , qtyOnHand="+Integer.parseInt(txtQty.getText())+
+                " WHERE code='"+txtItemCode.getText()+"'";
+        try {
+            Statement stmt=conn.createStatement();
+            int result=stmt.executeUpdate(sql);
+            if(result>0){
+                new Alert(Alert.AlertType.INFORMATION,"updated successfully").show();
+                loadItemTable();
+            }
+        } catch (SQLException e) {
+            System.out.println(sql);
+            new Alert(Alert.AlertType.ERROR, e.getMessage()+"tis is the sql query:"+sql).show();
+        }
+
+
     }
 
 
